@@ -25,3 +25,34 @@ form .input-group{
 form .input-group input{
     border: 1px solid #fff;
 }
+
+.container{
+    padding-top: 50px;
+
+        
+}
+
+.container a{
+    color: #868686;
+    font-style: normal;
+}
+
+.container button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.container .card-footer {
+    background-color: #E4E8F1;
+    
+}
+
+.container .card-footer a{
+    color: #47484B;
+    font-weight: bold;
+}
