@@ -21,5 +21,20 @@ angular.module('wisboo')
         }
     }
 
+    $scope.deleteById = (id) =>{
+        if(id){
+            urlservices.deleteById(id)
+            .then((response) =>{
+                console.log(response);
+            })
+        }
+    }
+
+    $scope.copyToClipboard = (urlToCopy) =>{
+        navigator.clipboard.writeText(urlToCopy)
+        .then(() =>{
+            console.log('copy successfully');
+        })
+    }
 
 }]);
