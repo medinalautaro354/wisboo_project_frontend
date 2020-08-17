@@ -16,6 +16,7 @@ form .btn{
 }
 
 form .input-group{
+    max-width: 600px;
     padding: 5px;
     background-color: white;
     border-radius: 5px;
@@ -32,9 +33,9 @@ form .input-group input{
         
 }
 
-.container a{
-    color: #868686;
-    font-style: normal;
+.container .card .card-body span{
+    font-weight: bold;
+    color: #525252;
 }
 
 .container button{
@@ -52,10 +53,9 @@ form .input-group input{
 }
 .container .card-footer {
     background-color: #E4E8F1;
-    
 }
 
-.container .card-footer a{
+.container .card-footer span{
     color: #47484B;
     font-weight: bold;
 }
@@ -65,5 +65,9 @@ form .input-group input{
 }
 
 .container p{
-    font-size: 12px;
+    font-size: 15px;
+}
+
+.container button{
+    margin-right: 10px;
 }

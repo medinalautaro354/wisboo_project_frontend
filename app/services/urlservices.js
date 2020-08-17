@@ -1,12 +1,11 @@
 
-
 angular.module('wisboo')
 .factory('urlServices', ['$http',function($http){
 
     return {
         "post": (url) =>{
 
-            return $http.post('http://localhost:3000/urls',{
+            return $http.post(apiRoute,{
                 originalUrl: url
             })
             .then((response) =>{
@@ -15,13 +14,13 @@ angular.module('wisboo')
         },
         "getAll":() =>{
 
-            return $http.get('http://localhost:3000/urls')
+            return $http.get(apiRoute)
             .then((response) =>{
                 return response.data;
             });
         },
         "deleteById":(id) =>{
-            return $http.delete(`http://localhost:3000/urls/${id}`)
+            return $http.delete(`${apiRoute}/${id}`)
             .then((response) =>{
                 return response;
             })
