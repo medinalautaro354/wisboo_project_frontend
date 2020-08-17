@@ -27,7 +27,7 @@ form .input-group input{
 }
 
 .container{
-    padding-top: 50px;
+    padding-top: 10px;
 
         
 }
@@ -47,6 +47,9 @@ form .input-group input{
     outline: inherit;
 }
 
+.container .row{
+    margin-top: 40px;
+}
 .container .card-footer {
     background-color: #E4E8F1;
     
@@ -55,4 +58,12 @@ form .input-group input{
 .container .card-footer a{
     color: #47484B;
     font-weight: bold;
+}
+
+.card .card-body{
+    padding: 0px 20px 0px 20px;
+}
+
+.container p{
+    font-size: 12px;
 }
