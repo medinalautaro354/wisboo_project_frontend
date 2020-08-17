@@ -19,6 +19,12 @@ angular.module('wisboo')
             .then((response) =>{
                 return response.data;
             });
+        },
+        "deleteById":(id) =>{
+            return $http.delete(`http://localhost:3000/urls/${id}`)
+            .then((response) =>{
+                return response;
+            })
         }
     };
 }]);
