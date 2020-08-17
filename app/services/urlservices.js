@@ -17,7 +17,6 @@ angular.module('wisboo')
 
             return $http.get('http://localhost:3000/urls')
             .then((response) =>{
-                debugger
                 return response.data;
             });
         }

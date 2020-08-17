@@ -3,6 +3,13 @@ angular.module('wisboo')
     $scope.url = '';
     $scope.urls = [];
 
+    urlservices.getAll()
+    .then((response) =>{
+        $scope.urls = response;
+
+        console.log($scope.urls);
+    })
+
     $scope.onSubmit = (e) => {
         e.preventDefault();
         if($scope.form.$valid){
