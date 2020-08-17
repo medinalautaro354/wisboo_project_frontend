@@ -3,18 +3,21 @@ angular.module('wisboo')
         $scope.url = '';
         $scope.urls = [];
 
-        urlservices.getAll()
-            .then((response) => {
-                $scope.urls = response;
+        $scope.getAll = () => {
+            urlservices.getAll()
+                .then((response) => {
+                    $scope.urls = response;
+                })
+        }
 
-                console.log($scope.urls);
-            })
+        $scope.getAll();
 
         $scope.onSubmit = (e) => {
             e.preventDefault();
             if ($scope.form.$valid) {
                 urlservices.post($scope.url).then((response) => {
-                    //TODO observe
+
+                    $scope.getAll();
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
@@ -43,7 +46,7 @@ angular.module('wisboo')
                     if (result.value) {
                         urlservices.deleteById(id)
                             .then((response) => {
-                                urlservices.getAll();
+                                $scope.getAll();
                             });
                         Swal.fire(
                             'Eliminado!',
